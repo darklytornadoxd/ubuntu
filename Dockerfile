@@ -1,17 +1,5 @@
-#
-# Ubuntu Dockerfile
-#
-# https://github.com/dockerfile/ubuntu
-#
+FROM ubuntu:22.04 as base
 
-# Pull base image.
-FROM ubuntu:22.04
+### Stage 1 - add/remove packages ###
 
-# Set environment variables.
-ENV HOME /root
-
-# Define working directory.
-WORKDIR /root
-
-# Define default command.
-CMD ["bash"]
+CMD ["/bin/bash", "/run.sh"]
